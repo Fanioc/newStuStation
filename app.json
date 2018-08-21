@@ -1,0 +1,12 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/web-view/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarTitleText": "信息学院新生微站",
+    "navigationBarBackgroundColor": "#0a60af",
+    "navigationBarTextStyle": "white"
+  }
+}

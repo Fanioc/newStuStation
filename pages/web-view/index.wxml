@@ -1,0 +1,2 @@
+<!--pages/web-view/index.wxml-->
+<web-view src="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzIyMzcxNTkxNg==&scene=124&uin=&key=&devicetype=Windows+10&version=62060426&lang=zh_CN&a8scene=7&winzoom=1"></web-view>

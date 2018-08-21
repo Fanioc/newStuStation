@@ -1,0 +1,192 @@
+<view class="container">
+
+  <view class='swiper'>
+    <!-- 自定义轮播图 -->
+    <view class='swiper-bg'> </view>
+    <swiper class='swiper-contain' indicator-dots="true" autoplay='true' indicator-color="rgba(0,0,0,.2)" indicator-active-color="rgba(0,0,0,.5)">
+      <!-- circular="true" previous-margin="30px" next-margin="30px"  -->
+      <swiper-item>
+
+        <view class="swiper-item card-blue">
+          <image src='/image/temp/1.jpg' class='swiper-image'></image>
+          <view class='swiper-image-tag'>image1</view>
+        </view>
+
+      </swiper-item>
+
+      <swiper-item>
+
+        <view class="swiper-item card-blue">
+          <image src='/image/temp/2.jpg' class='swiper-image'></image>
+          <view class='swiper-image-tag'>image2</view>
+        </view>
+
+      </swiper-item>
+
+      <swiper-item>
+
+        <view class="swiper-item card-blue">
+          <image src='/image/temp/3.jpg' class='swiper-image'></image>
+          <view class='swiper-image-tag'>image3</view>
+        </view>
+
+      </swiper-item>
+
+    </swiper>
+
+  </view>
+
+
+  <view class='notice'>
+    <view class='notice-top-shadow'></view>
+    <view class='notice-logo-shadow notice-logo'></view>
+    <image class='notice-logo' src='/image/logo.png'></image>
+    <!-- 自定义推文通知 -->
+
+    <view class='notice-title'>
+      <view class='notice-title-left'>
+        <text><text class='fa fa-navicon'></text> 最近消息</text>
+      </view>
+      <view class='notice-title-right'>
+        <text>更多···</text>
+
+      </view>
+    </view>
+
+    <swiper class='notice-swiper' circular="true" vertical='true' autoplay='true'>
+      <swiper-item class='notice-swiper-item'>
+        <image class='notice-prepic' src=''></image>
+        <view class='notice-precon'>
+          <view class='notice-news-title'>欢迎2018新生18新18新生1818新生</view>
+          <view class='notice-news-content'>即将踏入学校的你们将踏入学校的你</view>
+        </view>
+      </swiper-item>
+      <swiper-item class='notice-swiper-item'>
+        <image class='notice-prepic' src=''></image>
+        <view class='notice-precon'>
+          <view class='notice-news-title'>欢迎2018新生</view>
+          <view class='notice-news-content'>即将踏入学校的你们...</view>
+        </view>
+      </swiper-item>
+      <swiper-item class='notice-swiper-item'>
+        <image class='notice-prepic' src=''></image>
+        <view class='notice-precon'>
+          <view class='notice-news-title'>欢迎2018新生</view>
+          <view class='notice-news-content'>即将踏入学校的你们...</view>
+        </view>
+      </swiper-item>
+    </swiper>
+
+
+  </view>
+
+  <view class='tool'>
+    <view class='tool-title'>
+      <!-- <text class='fa fa-copyright'></text> -->
+      <text class='fa fa-bookmark'></text> 新生必看
+
+    </view>
+
+    <view class='tool-list'>
+
+      <view class='tool-list-item'>
+        <view class='tool-list-item-title'>宿舍查询</view>
+        <image class='tool-mpic' src='/image/mpic/6.png'></image>
+      </view>
+
+      <view class='tool-list-item'>
+
+        <view class='tool-list-item-title'>入学须知</view>
+        <image class='tool-mpic' src='/image/mpic/1.png'></image>
+
+      </view>
+      <view class='tool-list-item'>
+        <view class='tool-list-item-title'>报道流程</view>
+        <image class='tool-mpic' src='/image/mpic/2.png'></image>
+
+      </view>
+      <view class='tool-list-item'>
+        <view class='tool-list-item-title'>绿色通道</view>
+        <image class='tool-mpic' src='/image/mpic/3.png'></image>
+
+      </view>
+      <view class='tool-list-item'>
+        <view class='tool-list-item-title'>近期安排</view>
+        <image class='tool-mpic' src='/image/mpic/4.png'></image>
+
+      </view>
+      <view class='tool-list-item'>
+        <view class='tool-list-item-title'>学工队伍</view>
+        <image class='tool-mpic' src='/image/mpic/5.png'></image>
+
+      </view>
+
+    </view>
+    <!-- 功能区 -->
+  </view>
+
+
+  <view class='detail'>
+    <!-- 介绍区 -->
+    <view class='tool-title'>
+      <!-- <text class='fa fa-copyright'></text> -->
+      <text class='fa fa-university'></text> 学院介绍
+    </view>
+
+    <view>
+      #TODO
+    </view>
+
+  </view>
+
+
+
+  <view class='picture'>
+    <!-- 校园图片展示区 -->
+    <view style='text-align:center;font-size:16px;padding:10px;letter-spacing: 5px;color:#4887c2;' class='tool-title'>— 校园风光 —</view>
+    <swiper circular="true" previous-margin="50rpx" next-margin="50rpx" class='swiper-contain' indicator-dots="true" autoplay='true' indicator-color="rgba(0,0,0,.2)" indicator-active-color="rgba(0,0,0,.5)">
+
+      <swiper-item>
+
+        <view class="swiper-item card-blue">
+          <image src='/image/temp/1.jpg' class='swiper-image'></image>
+          <view class='swiper-image-tag'>image1</view>
+        </view>
+
+      </swiper-item>
+
+      <swiper-item>
+
+        <view class="swiper-item card-blue">
+          <image src='/image/temp/2.jpg' class='swiper-image'></image>
+          <view class='swiper-image-tag'>image2</view>
+        </view>
+
+      </swiper-item>
+
+      <swiper-item>
+
+        <view class="swiper-item card-blue">
+          <image src='/image/temp/3.jpg' class='swiper-image'></image>
+          <view class='swiper-image-tag'>image3</view>
+        </view>
+
+      </swiper-item>
+
+    </swiper>
+
+  </view>
+
+
+  <view class='qrcode'>
+    <!-- 二维码展示区 -->
+    欢迎关注西安财经学院信息学院（二维码） #TODO
+  </view>
+
+  <view class='footer'>
+    <!-- footer页脚注明 信息学院 -->
+    <text class='fa fa-copyright'></text> 西安财经学院信息学院 版权所有
+  </view>
+
+
+</view>
