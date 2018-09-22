@@ -11,10 +11,15 @@
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.2.2",
+	"libVersion": "2.2.4",
 	"appid": "wx637ec14a374254e8",
 	"projectname": "newstu",
 	"isGameTourist": false,
+	"scripts": {
+		"beforeCompile": "",
+		"beforePreview": "",
+		"beforeUpload": ""
+	},
 	"condition": {
 		"search": {
 			"current": -1,
@@ -33,12 +38,24 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 2,
 			"list": [
 				{
 					"id": -1,
 					"name": "web",
-					"pathName": "pages/web-view/index"
+					"pathName": "pages/web-view/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "宿舍查询",
+					"pathName": "pages/jinshuju/dormitory/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "轮播图",
+					"pathName": "pages/swpier/index"
 				}
 			]
 		}

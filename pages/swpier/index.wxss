@@ -1,0 +1,141 @@
+/* pages/swpier/index.wxss */
+
+page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper {
+  position: fixed;
+  width: 100%;
+  height: 480rpx;
+  background-image: linear-gradient(to top, #4093ff 0%, #0a60af 100%);
+  box-shadow: 0px 5px 20px rgba(116, 82, 172, 0.2);
+  z-index: 100;
+}
+
+.swiper-contain {
+  width: 100%;
+  height: 430rpx;
+}
+
+.swiper-item {
+  margin: 20rpx auto 0;
+  position: relative;
+  height: 350rpx;
+  width: 630rpx;
+  /* padding-top: calc(100% * 9/ 16); */
+  border-radius: 10px;
+}
+
+.swiper-image {
+  position: absolute; /*因为容器所有子元素需要绝对定位*/
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: rgb(219, 219, 219);
+  border-radius: 10px;
+}
+
+.swiper-image-tag {
+  position: absolute; /*因为容器所有子元素需要绝对定位*/
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 25px;
+  font-size: 16px;
+  text-align: center;
+  line-height: 1.5em;
+  background: rgba(105, 105, 105, 0.432);
+  border-radius: 0 0 10px 10px;
+  /* overflow: hidden; */
+}
+
+.tab {
+  font-size: 14px;
+  color: #fff;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  justify-content: space-around;
+}
+
+.tab-s {
+  font-size: 16px;
+  padding-bottom: 5px;
+}
+
+.weui-navbar-slider {
+  position: absolute;
+  height: 2px;
+  content: "";
+  background: #fff;
+  bottom: 0px;
+  transition: transform 0.3s;
+}
+
+.info-detil {
+  position: relative;
+  top: 480rpx;
+  width: 100%;
+  min-height: 60%;
+  /* z-index: -1; */
+}
+
+.notice-swiper-item {
+  display: flex;
+  /* padding: 0 20rpx 0 20rpx; */
+  justify-content: left;
+  flex-direction: row;
+  align-items: center;
+  color: #595959;
+  background: #fff;
+  padding: 10px;
+  margin: 10px 10px 10px 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(116, 82, 172, 0.1);
+}
+
+.notice-prepic {
+  /* flex: 1; */
+  width: 200rpx;
+  height: 200rpx;
+  background: #f7f7f7;
+  margin-right: 50rpx;
+  border-radius: 10px;
+}
+
+.notice-precon {
+  /* flex: 2; */
+  width: 400rpx;
+  height: 200rpx;
+  margin-right: 50rpx;
+}
+
+.notice-news-title {
+  position: relative;
+  min-height: 50rpx;
+  /* background: #bbb; */
+  line-height: 50rpx;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  white-space: pre-wrap;
+}
+
+.notice-news-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: pre-wrap;
+  position: relative;
+  margin-top: 20rpx;
+  max-height: 130rpx;
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-break: normal;
+  text-align: justify;
+  line-height: 40rpx;
+}

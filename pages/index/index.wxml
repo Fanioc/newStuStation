@@ -5,29 +5,11 @@
     <view class='swiper-bg'> </view>
     <swiper class='swiper-contain' indicator-dots="true" autoplay='true' indicator-color="rgba(0,0,0,.2)" indicator-active-color="rgba(0,0,0,.5)">
       <!-- circular="true" previous-margin="30px" next-margin="30px"  -->
-      <swiper-item>
+      <swiper-item wx:for="{{url.swiper}}">
 
         <view class="swiper-item card-blue">
-          <image src='/image/temp/1.jpg' class='swiper-image'></image>
-          <view class='swiper-image-tag'>image1</view>
-        </view>
-
-      </swiper-item>
-
-      <swiper-item>
-
-        <view class="swiper-item card-blue">
-          <image src='/image/temp/2.jpg' class='swiper-image'></image>
-          <view class='swiper-image-tag'>image2</view>
-        </view>
-
-      </swiper-item>
-
-      <swiper-item>
-
-        <view class="swiper-item card-blue">
-          <image src='/image/temp/3.jpg' class='swiper-image'></image>
-          <view class='swiper-image-tag'>image3</view>
+          <image src='{{item.img}}' class='swiper-image'></image>
+          <!-- <view class='swiper-image-tag'>image1</view> -->
         </view>
 
       </swiper-item>
@@ -47,33 +29,21 @@
       <view class='notice-title-left'>
         <text><text class='fa fa-navicon'></text> 最近消息</text>
       </view>
-      <view class='notice-title-right'>
+      <!-- <view class='notice-title-right'>
         <text>更多···</text>
-
-      </view>
+      </view> -->
     </view>
 
     <swiper class='notice-swiper' circular="true" vertical='true' autoplay='true'>
-      <swiper-item class='notice-swiper-item'>
-        <image class='notice-prepic' src=''></image>
+      <swiper-item wx:for="{{url.recent}}" class='notice-swiper-item' id="{{item.url}}" bind:tap="nav">
+
+        <image class='notice-prepic' src='{{item.img}}'></image>
         <view class='notice-precon'>
-          <view class='notice-news-title'>欢迎2018新生18新18新生1818新生</view>
-          <view class='notice-news-content'>即将踏入学校的你们将踏入学校的你</view>
+          <view class='notice-news-title'>{{item.title}}</view>
+          <view class='notice-news-content'>{{item.des}}</view>
         </view>
-      </swiper-item>
-      <swiper-item class='notice-swiper-item'>
-        <image class='notice-prepic' src=''></image>
-        <view class='notice-precon'>
-          <view class='notice-news-title'>欢迎2018新生</view>
-          <view class='notice-news-content'>即将踏入学校的你们...</view>
-        </view>
-      </swiper-item>
-      <swiper-item class='notice-swiper-item'>
-        <image class='notice-prepic' src=''></image>
-        <view class='notice-precon'>
-          <view class='notice-news-title'>欢迎2018新生</view>
-          <view class='notice-news-content'>即将踏入学校的你们...</view>
-        </view>
+
+
       </swiper-item>
     </swiper>
 
@@ -89,36 +59,35 @@
 
     <view class='tool-list'>
 
-      <view class='tool-list-item'>
+      <view class='tool-list-item' bind:tap="toDor">
         <view class='tool-list-item-title'>宿舍查询</view>
         <image class='tool-mpic' src='/image/mpic/6.png'></image>
       </view>
 
-      <view class='tool-list-item'>
+      <view id='{{url.must.rxxz.url}}' class='tool-list-item' bind:tap="nav">
 
         <view class='tool-list-item-title'>入学须知</view>
         <image class='tool-mpic' src='/image/mpic/1.png'></image>
 
       </view>
-      <view class='tool-list-item'>
+      <view id='{{url.must.bdlc.url}}' class='tool-list-item' bind:tap="nav">
         <view class='tool-list-item-title'>报道流程</view>
         <image class='tool-mpic' src='/image/mpic/2.png'></image>
 
       </view>
-      <view class='tool-list-item'>
+      <view id='{{url.must.lstd.url}}' class='tool-list-item' bind:tap="nav">
         <view class='tool-list-item-title'>绿色通道</view>
         <image class='tool-mpic' src='/image/mpic/3.png'></image>
 
       </view>
-      <view class='tool-list-item'>
+      <view id='more' class='tool-list-item' bind:tap="more">
         <view class='tool-list-item-title'>近期安排</view>
         <image class='tool-mpic' src='/image/mpic/4.png'></image>
 
       </view>
-      <view class='tool-list-item'>
+      <view id='{{url.must.xgdw.url}}' class='tool-list-item' bind:tap="nav">
         <view class='tool-list-item-title'>学工队伍</view>
         <image class='tool-mpic' src='/image/mpic/5.png'></image>
-
       </view>
 
     </view>
@@ -128,15 +97,38 @@
 
   <view class='detail'>
     <!-- 介绍区 -->
-    <view class='tool-title'>
+    <view id='more' class='tool-title'>
       <!-- <text class='fa fa-copyright'></text> -->
       <text class='fa fa-university'></text> 学院介绍
     </view>
 
-    <view>
-      #TODO
-    </view>
+    <view id='more' class='detail-list'>
+      <view class='detail-list-item' bind:tap="more">
+        <image src='/image/icon/9.png' class='detail-list-item-pic'></image>
+        <view class='detail-list-item-title'>学校制度</view>
+      </view>
+      <view id='more' class='detail-list-item' bind:tap="more">
+        <image src='/image/icon/7.png' class='detail-list-item-pic'></image>
+        <view class='detail-list-item-title'>校园文化</view>
+      </view>
+      <view id='{{url.det.zzjs.url}}' class='detail-list-item' bind:tap="nav">
+        <image src='/image/icon/6.png' class='detail-list-item-pic'></image>
+        <view class='detail-list-item-title'>组织介绍</view>
+      </view>
+      <view id='{{url.det.rdxz.url}}' class='detail-list-item' bind:tap="nav">
+        <image src='/image/icon/4.png' class='detail-list-item-pic'></image>
+        <view class='detail-list-item-title'>入党须知</view>
+      </view>
+      <view id='more' class='detail-list-item' bind:tap="more">
+        <image src='/image/icon/3.png' class='detail-list-item-pic'></image>
+        <view class='detail-list-item-title'>奖助情况</view>
+      </view>
 
+      <view id='{{url.det.shxts.url}}' class='detail-list-item' bind:tap="nav">
+        <image src='/image/icon/1.png' class='detail-list-item-pic'></image>
+        <view class='detail-list-item-title'>生活小贴士</view>
+      </view>
+    </view>
   </view>
 
 
@@ -146,33 +138,12 @@
     <view style='text-align:center;font-size:16px;padding:10px;letter-spacing: 5px;color:#4887c2;' class='tool-title'>— 校园风光 —</view>
     <swiper circular="true" previous-margin="50rpx" next-margin="50rpx" class='swiper-contain' indicator-dots="true" autoplay='true' indicator-color="rgba(0,0,0,.2)" indicator-active-color="rgba(0,0,0,.5)">
 
-      <swiper-item>
-
+      <swiper-item wx:for="{{url.image}}">
         <view class="swiper-item card-blue">
-          <image src='/image/temp/1.jpg' class='swiper-image'></image>
-          <view class='swiper-image-tag'>image1</view>
+          <image src='{{item.img}}' class='swiper-image'></image>
+          <!-- <view class='swiper-image-tag'>image1</view> -->
         </view>
-
       </swiper-item>
-
-      <swiper-item>
-
-        <view class="swiper-item card-blue">
-          <image src='/image/temp/2.jpg' class='swiper-image'></image>
-          <view class='swiper-image-tag'>image2</view>
-        </view>
-
-      </swiper-item>
-
-      <swiper-item>
-
-        <view class="swiper-item card-blue">
-          <image src='/image/temp/3.jpg' class='swiper-image'></image>
-          <view class='swiper-image-tag'>image3</view>
-        </view>
-
-      </swiper-item>
-
     </swiper>
 
   </view>
@@ -180,12 +151,13 @@
 
   <view class='qrcode'>
     <!-- 二维码展示区 -->
-    欢迎关注西安财经学院信息学院（二维码） #TODO
+    <image style='width:750rpx;height:467rpx;' src='/image/qrcode.jpg'></image>
+
   </view>
 
   <view class='footer'>
     <!-- footer页脚注明 信息学院 -->
-    <text class='fa fa-copyright'></text> 西安财经学院信息学院 版权所有
+    <text class='fa fa-copyright'></text> 西安财经学院信息学院
   </view>
 
 

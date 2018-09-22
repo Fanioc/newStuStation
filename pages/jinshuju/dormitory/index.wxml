@@ -1,0 +1,69 @@
+<!--pages/jinshuju/dormitory/index.wxml-->
+<view class='view-box'>
+  <!-- <view class='swiper-bg'> </view> -->
+  <view class='title'>宿 舍 查 询</view>
+  <view class='search'>
+    <view class='search-bar shadow'>
+      <view class='search-icon'>
+        <text class='fa fa-search'></text>
+      </view>
+
+
+      <input class='search-text' type='text' focus='true' confirm-type="search" bindinput="input" bindconfirm="search" placeholder="请输入你的姓名" placeholder-style='font-size:16px; color:#c1c1c1;'></input>
+      <view class='search-sub' bind:tap="search">
+        <text class='fa fa-check search-icons' ></text>
+      </view>
+
+
+    </view>
+  </view>
+
+
+  <view class='result' style='opacity:{{hidden}}; display:block;'>
+    <view class='result-title'>{{result.msg}}</view>
+
+    <!-- <scroll-view scroll-y='true' class='result-view'> -->
+
+    <view class="table" wx:for="{{result.data}}">
+      <view class="tr">
+        <view class="th">宿舍号</view>
+        <text selectable='true' class="td">{{item.ssh}}</text>
+      </view>
+      <view class="tr">
+        <view class="th">床号</view>
+        <text selectable='true' class="td">{{item.ch}}</text>
+      </view>
+      <view class="tr">
+        <view class="th">专业班级</view>
+        <text selectable='true' class="td">{{item.zybj}}</text>
+      </view>
+      <view class="tr">
+        <view class="th">姓名</view>
+        <text selectable='true' class="td">{{item.xm}}</text>
+      </view>
+      <view class="tr">
+        <view class="th">性别</view>
+        <text selectable='true' class="td">{{item.xb}}</text>
+      </view>
+      <view class="tr">
+        <view class="th">学号</view>
+        <text selectable='true' class="td">{{item.xh}}</text>
+      </view>
+      <view class="tr">
+        <view class="th">其他成员</view>
+        <text selectable='true' class="td">{{item.qtcy}}</text>
+      </view>
+      <view class="tr">
+        <view class="th">辅导员</view>
+        <text selectable='true' class="td">{{item.fdy}}</text>
+      </view>
+      <view class="tr">
+        <view class="th">辅导员联系方式</view>
+        <text selectable='true' class="td">{{item.fdylxfs}}</text>
+      </view>
+    </view>
+
+
+    <!-- </scroll-view> -->
+  </view>
+</view>

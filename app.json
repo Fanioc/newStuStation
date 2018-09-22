@@ -1,7 +1,10 @@
 {
   "pages": [
+    
     "pages/index/index",
-    "pages/web-view/index"
+    "pages/jinshuju/dormitory/index",
+    "pages/web-view/index",
+    "pages/swpier/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

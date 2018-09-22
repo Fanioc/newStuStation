@@ -1,0 +1,91 @@
+<!--pages/swpier/index.wxml-->
+
+
+<view class='swiper'>
+  <!-- 自定义轮播图 -->
+  <swiper class='swiper-contain' indicator-dots="true" autoplay='true' indicator-color="rgba(255,255,255,.2)" indicator-active-color="rgba(255,255,255,.5)">
+    <!-- circular="true" previous-margin="30px" next-margin="30px"  -->
+    <swiper-item wx:for="{{url.swp}}">
+
+      <view class="swiper-item card-blue">
+        <image src='{{item.img}}' class='swiper-image' id='{{item.url}}' bind:tap="nav"></image>
+        <view class='swiper-image-tag'>{{item.title}}</view>
+      </view>
+
+    </swiper-item>
+
+
+
+
+  </swiper>
+
+  <view class='tab flex-x'>
+    <view class='tab-s' id='0' bindtap='tabClick'>学校制度
+      <view class="weui-navbar-slider" style="width:64px;transform:translateX({{slideOffset}}px);"></view>
+    </view>
+    <view class='tab-s' id='1' bindtap='tabClick'>校园文化</view>
+    <view class='tab-s' id='2' bindtap='tabClick'>奖助情况</view>
+    <view class='tab-s' id='3' bindtap='tabClick'>近期安排</view>
+  </view>
+</view>
+
+<swiper current="{{activeIndex}}" bindchange="tabChange" class='info-detil'>
+
+  <swiper-item>
+
+    <scroll-view scroll-y='true' style='height:100%;box-sizing: border-box;'>
+
+      <view wx:for="{{url.xxzd}}" id="{{item.url}}" class='notice-swiper-item' bind:tap="nav">
+        <image class='notice-prepic' src='{{item.img}}'></image>
+        <view class='notice-precon'>
+          <view class='notice-news-title'>{{item.title}}</view>
+          <view class='notice-news-content'>{{item.des}}</view>
+        </view>
+      </view>
+
+    </scroll-view>
+  </swiper-item>
+
+  <swiper-item>
+
+    <scroll-view scroll-y='true' style='height:100%;box-sizing: border-box;'>
+      <view wx:for="{{url.xywh}}" id="{{item.url}}" class='notice-swiper-item' bind:tap="nav">
+        <image class='notice-prepic' src='{{item.img}}'></image>
+        <view class='notice-precon'>
+          <view class='notice-news-title'>{{item.title}}</view>
+          <view class='notice-news-content'>{{item.des}}</view>
+        </view>
+      </view>
+
+    </scroll-view>
+  </swiper-item>
+
+
+  <swiper-item>
+
+    <scroll-view scroll-y='true' style='height:100%;box-sizing: border-box;'>
+
+      <view wx:for="{{url.jzqk}}" id="{{item.url}}" class='notice-swiper-item' bind:tap="nav">
+        <image class='notice-prepic' src='{{item.img}}'></image>
+        <view class='notice-precon'>
+          <view class='notice-news-title'>{{item.title}}</view>
+          <view class='notice-news-content'>{{item.des}}</view>
+        </view>
+      </view>
+
+    </scroll-view>
+  </swiper-item>
+
+  <swiper-item>
+    <scroll-view scroll-y='true' style='height:100%;box-sizing: border-box;'>
+      <view wx:for="{{url.jqap}}" id="{{item.url}}" class='notice-swiper-item' bind:tap="nav">
+        <image class='notice-prepic' src='{{item.img}}'></image>
+        <view class='notice-precon'>
+          <view class='notice-news-title'>{{item.title}}</view>
+          <view class='notice-news-content'>{{item.des}}</view>
+        </view>
+      </view>
+
+    </scroll-view>
+  </swiper-item>
+</swiper>
